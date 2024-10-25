@@ -5,6 +5,10 @@ const input = require("readline-sync");
 /* ARREDONDAMENTO – Pesquise, teste e diferencie os métodos de Math: ceil(), floor(),
 round() e trunc(). */
 
+console.log("--------------------------------");
+console.log("Exercício 9 - Arredondamento");
+console.log("--------------------------------");
+
 let numero: number = 0,
     nome: string = "";
 

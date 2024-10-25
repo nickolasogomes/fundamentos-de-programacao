@@ -6,6 +6,10 @@ const input = require("readline-sync");
 percentual) e a quantidade de meses transcorridos. Exiba o montante depois de transcorrido o tempo,
 considerando duas casas decimais depois da vírgula. Use o método Number.toFixed(). */
 
+console.log("--------------------------------");
+console.log("Exercício 8 - Juros Compostos");
+console.log("--------------------------------");
+
 let capital: number = 0, 
     taxa: number = 0, 
     meses: number = 0,
