@@ -16,7 +16,7 @@ Dinheiro retirado:
 1 moeda(s) de R$ 1 */
 
 console.log("--------------------------------");
-console.log("Exercício 2 - Caixa Eletrônico");
+console.log("Exercício 3 - Caixa Eletrônico com moedas");
 console.log("--------------------------------");
 
 let saque: number = 0,
@@ -26,10 +26,15 @@ let saque: number = 0,
     n10: number = 0,
     n5: number = 0,
     n2: number = 0,
-    m1: number = 0, 
+    m1: number = 0,
+    m50: number = 0,
+    m25: number = 0,
+    m10: number = 0,
+    m5: number = 0,
+    m01: number = 0, 
     resto: number = 0;
 
-saque = input.questionInt("Informe o valor do saque a ser realizado:");
+saque = input.questionFloat("Informe o valor do saque a ser realizado:");
 
 n100 = Math.trunc(saque / 100);
 resto = saque % 100;
@@ -49,22 +54,36 @@ resto = resto % 5;
 n2 = Math.trunc(resto / 2);
 resto = resto % 2;
 
-m1 = resto;
+m1 = Math.trunc(resto);
+resto = resto % 1;
+// O método toFixed() não se aplica na solução pois converteria a variável em string.
+
+m50 = Math.trunc(resto / 0.5);
+resto = resto % 0.5;
+
+m25 = Math.trunc(resto / 0.25);
+resto = resto % 0.25;
+
+m10 = Math.trunc(resto / 0.10);
+resto = resto % 0.10;
+
+m5 = Math.trunc(resto / 0.05);
+resto = resto % 0.05;
+
+m01 = Math.trunc(resto / 0.01);
 
 console.log(
-  "Dinheiro retirado:\n" +
-    n100 +
-    " nota(s) de R$ 100,00\n" +
-    n50 +
-    " nota(s) de R$ 50,00\n" +
-    n20 +
-    " nota(s) de R$ 20,00\n" +
-    n10 +
-    " nota(s) de R$ 10,00\n" +
-    n5 +
-    " nota(s) de R$ 5,00\n" +
-    n2 +
-    " nota(s) de R$ 2,00\n" +
-    m1 +
-    " moeda(s) de R$ 1,00",
+  "Dinheiro retirado:\n",
+    n100,"nota(s) de R$ 100,00\n",
+    n50,"nota(s) de R$ 50,00\n",
+    n20,"nota(s) de R$ 20,00\n",
+    n10,"nota(s) de R$ 10,00\n",
+    n5,"nota(s) de R$ 5,00\n",
+    n2,"nota(s) de R$ 2,00\n",
+    m1,"moeda(s) de R$ 1,00\n",
+    m50,"moeda(s) de R$ 0,50\n",
+    m25,"moeda(s) de R$ 0,25\n",
+    m10,"moeda(s) de R$ 0,10\n",
+    m5,"moeda(s) de R$ 0,05\n",
+    m01,"moeda(s) de R$ 0,01\n"
 );

@@ -1,6 +1,6 @@
 import * as readline from 'readline';
 
-var input = require("readline-sync");
+const input = require("readline-sync");
 
 /* REFRIGERANTES – Leia a quantidade de pessoas que confirmaram presença em uma
 confraternização. Considere que cada pessoa bebe, em média, 300ml de refrigerante e que cada

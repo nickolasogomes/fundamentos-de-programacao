@@ -29,10 +29,10 @@ dias = Math.trunc(segundos / (24*60*60));
 resto = segundos % (24*60*60);
 
 horas = Math.trunc(resto / (60*60));
-resto = segundos % (60*60);
+resto = resto % (60*60);
 
 minutos = Math.trunc(resto / 60);
-resto = segundos % 60;
+resto = resto % 60;
 
 segundos = resto;
 
