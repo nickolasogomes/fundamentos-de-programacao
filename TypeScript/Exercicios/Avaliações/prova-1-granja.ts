@@ -15,6 +15,11 @@ Resto: 1
 
 */
 
+console.log("--------------------------",
+            "\nAvaliação 01 - Granja",
+            "\n--------------------------"
+);
+
 let ovos: number = 0, 
     duzias: number = 0,
     meiasD: number = 0,
