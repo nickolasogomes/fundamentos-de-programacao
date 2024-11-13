@@ -1,14 +1,10 @@
 export default class Relogio {
     private horas: number;
     private minutos: number;
-    private grausH: number;
-    private grausM: number;
 
     public constructor (horas: number, minutos: number){
         this.horas = horas;
         this.minutos = minutos;
-        this.grausH = 0;
-        this.grausM = 0;
     }
 
     public getHoras(): number {
@@ -19,10 +15,19 @@ export default class Relogio {
         return this.minutos;
     }
 
-    public convertaEmGraus(): number{
-        this.grausH = this.horas / 24;
-        this.grausM = this.minutos / 60;
+    public horasEmGraus(): number {
+        return (((this.horas%12) + (this.minutos/60))*30);
+    }
 
+    public minutosEmGraus(): number {
+        return this.minutos * 6;
+    }
+
+    public toString(): string {
+        return "\nHoras: " + this.horas + " h" +
+                "\nHoras em graus: " + this.horasEmGraus().toFixed(2) + "°" + 
+                "\nMinutos: " + this.minutos + " min" + 
+                "\nMinutos em graus: " + this.minutosEmGraus().toFixed(2) + "°";
     }
 }
 
