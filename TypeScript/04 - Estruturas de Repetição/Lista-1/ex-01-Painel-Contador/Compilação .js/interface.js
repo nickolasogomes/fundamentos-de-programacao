@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var painel_contador_1 = require("./painel-contador");
+var p1 = new painel_contador_1.default(1, 10);
+p1.contagem();
+p1.contagemDecrescente();
+p1.contagemPares();
+p1.contagemImpares();
+p1.contagemPassos(3);
+p1.contagemOmitindo(3);

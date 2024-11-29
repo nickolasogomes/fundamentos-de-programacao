@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var pessoa_1 = require("../pessoa");
+var elon = new pessoa_1.default("Elon Musk", 28, 6, 1971);
+var denzel = new pessoa_1.default("Denzel Washington", 28, 12, 1954);
+var fadinha = new pessoa_1.default("Rayssa Leal", 4, 1, 2008);
+elon.calculaIdade(20241118);
+console.log(elon.toString());
+denzel.calculaIdade(20241118);
+console.log(denzel.toString());
+elon.calculaIdade(20241118);
+console.log(fadinha.toString());
