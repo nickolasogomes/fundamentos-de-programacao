@@ -24,10 +24,12 @@ export default class PainelContador {
 
     public setLimiteSuperior(limiteSuperior: number): void {
         this.limiteSuperior = limiteSuperior;
+        this.validador(this.limiteSuperior, this.limiteInferior);
     }
 
     public setLimiteIferior(limiteInferior: number): void {
         this.limiteInferior = limiteInferior;
+        this.validador(this.limiteSuperior, this.limiteInferior);
     }
 
     public contagem(): void{
