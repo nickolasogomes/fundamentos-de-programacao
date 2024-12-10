@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var IRPF_1 = require("../IRPF");
+var s1 = new IRPF_1.default(1320.79);
+var s2 = new IRPF_1.default(2112.01);
+var s3 = new IRPF_1.default(2900.53);
+var s4 = new IRPF_1.default(4363.31);
+var s5 = new IRPF_1.default(50821.55);
+console.log(s1.toString());
+console.log(s2.toString());
+console.log(s3.toString());
+console.log(s4.toString());
+console.log(s5.toString());
