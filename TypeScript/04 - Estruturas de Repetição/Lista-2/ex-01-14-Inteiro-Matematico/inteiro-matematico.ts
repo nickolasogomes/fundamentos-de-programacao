@@ -61,5 +61,94 @@ export default class InterioMatematico {
         return soma;          
     }
 
+    public elevado(expoente: number): number{
+        
+        console.log("---------------------"); 
+        console.log( this.n + " elevado a " + expoente);
+        console.log("---------------------\n");
+        
+        if(expoente == 0)
+            return 1;
+        
+        if(this.n == 0)
+            return 0;
+        
+        if(this.n == 1)
+            return 1;
+
+        let potencia = 1; 
+
+        for(let i = expoente; i > 0; i--){
+            potencia *= this.n;
+        }
+
+        console.log("Resultado: " + potencia);
+        return potencia;
+    }
+
+    public fatorial(): number {
+
+        console.log("---------------------"); 
+        console.log( this.n + " Fatorial");
+        console.log("---------------------\n");
+
+        let resultado = this.n;
+        for(let i = this.n - 1; i > 0; i--){
+            resultado *= i;
+        }
+
+        console.log("Resultado: " + resultado);
+        return resultado;
+    }
+
+    public maiorDivisor(): number{
+        let maior = 1;
+        for(let i = Math.floor(this.n/2); i > 0; i--){
+            if(this.n % i == 0){
+                maior = i;
+                return maior;
+            }
+        }
+        return maior;
+    }
+
+    public menorDivisor():number{
+        let menor = 1;
+        for(let i = 2; i <= this.n/2; i++)
+            if(this.n % i == 0){
+                menor = i;
+                return menor;     
+            }
+        return menor;
+    }
+
+    public mdc(outro: number): number{
+        let mdc = 1;
+        if(this.n > outro)
+            for(let i = Math.floor(this.n/2); i > 0; i--)
+                if(this.n % i == 0 && outro % i == 0){
+                    mdc = i;
+                    return mdc;
+                }
     
+        for(let i = Math.floor(outro/2); i > 0; i--)
+            if(this.n % i == 0 && outro % i == 0){
+                mdc = i;
+                return mdc;
+            }
+        return mdc;
+    }
+
+    //método AA3
+    public divisoresComuns(m: number): number{
+        let divisores:number = 0;
+        let maior: number = Math.max(this.n, m);
+
+        for(let i = 1; i <= maior; i++)
+            if(this.n % i == 0 && m % i == 0)
+                divisores ++;
+
+        return divisores;
+    }
+
 }
